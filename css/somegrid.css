@@ -42,31 +42,41 @@ header {
   background-image: url(../img/bg.jpg);
   background-size: cover;
   background-color: #eaa;
-  padding: 5rem 0 4rem;
+
+  /* 内側のレイアウト */
+  padding: 5rem 10px 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* あんまり意味ないけど */
+}
+
+.article-header-inner {
+  max-width: 40rem;
 }
 
 .article-title {
-  max-width: 40rem;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .article-summary {
-  max-width: 40rem;
-  margin: 1rem auto;
+  margin: 1rem 0;
   line-height: 1.5;
 }
 
 .article-pubdate {
-  max-width: 40rem;
-  margin: 1rem auto;
+  margin: 1rem 0;
   font-size: 0.9rem;
   color: #fffc;
 }
 
 .article-content {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2rem 0;
+  padding: 2rem 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.article-content-inner {
   max-width: 40rem;
   line-height: 1.8;
 }
