@@ -1,0 +1,59 @@
+<!doctype html>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, initial-scale=1">
+<title>iPhone Xのセーフエリア</title>
+<style>
+:root {
+  --line-color: #0002;
+  --grid-unit: 10px;
+}
+body {
+  /* リセット */
+  margin: 0;
+  padding: 0;
+  
+  /* レイアウト */
+  display: grid;
+  grid-template: constant(safe-area-inset-top) 1fr constant(safe-area-inset-bottom) / constant(safe-area-inset-left) 1fr constant(safe-area-inset-right);
+  grid-template: env(safe-area-inset-top) 1fr env(safe-area-inset-bottom) / env(safe-area-inset-left) 1fr env(safe-area-inset-right);
+
+  /* 高さはちょっと高めに */
+  width: 100vw;
+  height: 110vh;
+
+  font-family: sans-serif;
+}
+
+.safe-area {
+  grid-area: 2 / 2 / -2 / -2;
+  align-self: center;
+  justify-self: center;
+}
+.inset {
+  /* どれくらいの幅なのか知りたくて */
+  background-image:
+    repeating-linear-gradient(to bottom, transparent, transparent calc(var(--grid-unit) - 1px), var(--line-color) calc(var(--grid-unit) - 1px), var(--line-color) var(--grid-unit), transparent var(--grid-unit)),
+    repeating-linear-gradient(to right, transparent, transparent calc(var(--grid-unit) - 1px), var(--line-color) calc(var(--grid-unit) - 1px), var(--line-color) var(--grid-unit), transparent var(--grid-unit));
+
+  background-color: #fc08;
+}
+.top {
+  grid-area: 1 / 1 / 2 / -1;
+}
+.right {
+  grid-area: 1 / -1 / -1 / -2;
+}
+.bottom {
+  grid-area: -1 / 1 / -2 / -1;
+}
+.left {
+  grid-area: 1 / 1 / -1 / 2;
+}
+</style>
+<body>
+<div class="safe-area">セーフエリア</div>
+<div class="inset top"></div>
+<div class="inset right"></div>
+<div class="inset bottom"></div>
+<div class="inset left"></div>
+</body>
