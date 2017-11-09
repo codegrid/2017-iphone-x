@@ -41,6 +41,7 @@ header {
   /* CodeGridのJavaScriptドリルシリーズの背景からもってきた */
   background-image: url(../img/bg.jpg);
   background-size: cover;
+  background-color: #eaa;
   padding: 5rem 0 4rem;
 }
 
