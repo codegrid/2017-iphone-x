@@ -41,7 +41,7 @@ header {
   /* CodeGridのJavaScriptドリルシリーズの背景からもってきた */
   background-image: url(../img/bg.jpg);
   background-size: cover;
-  padding: 5rem 0;
+  padding: 5rem 0 4rem;
 }
 
 .article-title {
