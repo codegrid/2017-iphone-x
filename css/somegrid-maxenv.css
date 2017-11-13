@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* somegrid.cssのスタイルを一部上書きする */
+/* header, .article-header, .article-contentの左右padding 10pxを上書きする*/
+/* max()を使って、最小のpaddingを10pxにするように指定する */
+header,
+.article-header,
+.article-content {
+  /* iOS 11.1以下にはmin(), max()がないのでconstant()を併記しても意味がない */
+  padding-right: max( 10px, env(safe-area-inset-right) );
+  padding-left: max( 10px, env(safe-area-inset-left) );
+}
