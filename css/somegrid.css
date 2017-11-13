@@ -8,6 +8,8 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+/* サイトヘッダ */
+
 header {
   display: flex;
   align-items: center;
@@ -36,6 +38,8 @@ header {
 .hamburger {
   display: inline-flex;
 }
+
+/* 記事ヘッダ */
 
 .article-header {
   /* CodeGridのJavaScriptドリルシリーズの背景からもってきた */
@@ -69,6 +73,8 @@ header {
   font-size: 0.9rem;
   color: #fffc;
 }
+
+/* 記事本文 */
 
 .article-content {
   padding: 2rem 10px;
