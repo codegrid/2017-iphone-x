@@ -55,7 +55,7 @@ header {
 }
 
 .article-header-inner {
-  max-width: 40rem;
+  max-width: 50rem;
 }
 
 .article-title {
@@ -84,7 +84,7 @@ header {
 }
 
 .article-content-inner {
-  max-width: 40rem;
+  max-width: 50rem;
   line-height: 1.8;
 }
 
